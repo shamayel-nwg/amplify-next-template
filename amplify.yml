@@ -3,6 +3,9 @@ backend:
   phases:
     build:
       commands:
+        - echo "Testing S3 buckets access"
+        - aws s3 ls
+        - echo "Building Application"
         - npm ci --cache .npm --prefer-offline
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID --debug
 frontend:
