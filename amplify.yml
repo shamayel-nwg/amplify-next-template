@@ -3,8 +3,6 @@ backend:
   phases:
     build:
       commands:
-        - echo "Testing S3 buckets access"
-        - aws s3 ls
         - echo "Testing S3 bucket access - list"
         - aws s3 ls s3://cdk-hnb659fds-assets-481665082761-eu-west-1
         - echo "Testing S3 bucket access - write"
